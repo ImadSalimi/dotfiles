@@ -1,6 +1,6 @@
 " Always show status line
 set laststatus=2
-" Enablee 256-colors mode
+" Enable 256-colors mode
 set t_Co=256
 
 " Source .vimrc after saving it
@@ -11,7 +11,6 @@ endif
 "===================
 " Color Schemes
 "===================
-" Color scheme
 colorscheme railscasts
 
 "===================
@@ -22,16 +21,19 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" Toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
 " CPP Syntax
 let g:cpp_class_scope_highlight=1
 
 "===================
 " Visual settings
 "===================
-
 " Set indents to be of width 4
 set tabstop=4
 set softtabstop=4
+set shiftwidth=4
 
 " Show line numbers
 set nu
@@ -39,7 +41,7 @@ set nu
 "===================
 " Mappings
 "===================
-" Unmap arroy keys
+" Unmap arrow keys
 no <up> ddkP
 no <right> <Nop>
 no <down> ddp
@@ -54,9 +56,8 @@ ino <left> <Nop>
 map n nzz
 map N Nzz
 map G Gzz
-
-" Toggle NERDTree
-map <C-n> :NERDTreeToggle<CR>
+map { {zz
+map } }zz
 
 " Change focus between windows
 map <C-h> <C-w>h
@@ -65,5 +66,6 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Toggle 'set list'
+set list
 map <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
