@@ -16,6 +16,7 @@
 [submodule "vim/bundle/youcompleteme"]
 	path = vim/bundle/youcompleteme
 	url = https://github.com/valloric/youCompleteme
+	ignore = dirty
 [submodule "vim/bundle/vim-commentary"]
 	path = vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary
