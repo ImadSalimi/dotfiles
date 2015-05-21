@@ -8,13 +8,26 @@ if has("autocmd")
 	autocmd bufwritepost .vimrc :source $MYVIMRC
 endif
 
+"===================
+" Color Schemes
+"===================
 " Color scheme
 colorscheme railscasts
 
+"===================
+" Plugins
+"===================
 " Pathogen
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
+" CPP Syntax
+let g:cpp_class_scope_highlight=1
+
+"===================
+" Visual settings
+"===================
 
 " Set indents to be of width 4
 set tabstop=4
