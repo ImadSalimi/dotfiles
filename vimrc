@@ -1,3 +1,6 @@
+"===================
+" General Settings
+"===================
 " Always show status line
 set laststatus=2
 " Enable 256-colors mode
@@ -11,7 +14,9 @@ endif
 "===================
 " Color Schemes
 "===================
-colorscheme railscasts
+set background=dark
+syntax enable
+colorscheme solarized
 
 "===================
 " Plugins
