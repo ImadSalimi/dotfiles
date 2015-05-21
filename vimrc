@@ -8,6 +8,9 @@ if has("autocmd")
 	autocmd bufwritepost .vimrc :source $MYVIMRC
 endif
 
+" Color scheme
+colorscheme railscasts
+
 " Pathogen
 execute pathogen#infect()
 syntax on
