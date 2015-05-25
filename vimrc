@@ -14,7 +14,7 @@ endif
 "===================
 " Color Schemes
 "===================
-set background=dark
+set background=light
 syntax enable
 colorscheme solarized
 
@@ -40,6 +40,11 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
+" Better indentation
+set autoindent
+set smartindent
+set cindent
+
 " Show line numbers
 set nu
 
@@ -51,11 +56,6 @@ no <up> ddkP
 no <right> <Nop>
 no <down> ddp
 no <left> <Nop>
-
-ino <up> <Nop>
-ino <right> <Nop>
-ino <down> <Nop>
-ino <left> <Nop>
 
 " Center screen on movements
 map n nzz
