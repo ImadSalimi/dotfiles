@@ -14,9 +14,9 @@ endif
 "===================
 " Color Schemes
 "===================
-set background=light
+set background=dark
 syntax enable
-colorscheme solarized
+colorscheme railscasts
 
 "===================
 " Plugins
@@ -47,6 +47,9 @@ set cindent
 
 " Show line numbers
 set nu
+
+" Highlight search
+set hls
 
 "===================
 " Mappings
