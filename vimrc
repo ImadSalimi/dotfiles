@@ -14,9 +14,8 @@ endif
 "===================
 " Color Schemes
 "===================
-set background=dark
 syntax enable
-colorscheme railscasts
+colorscheme PaperColor
 
 "===================
 " Plugins
@@ -44,6 +43,9 @@ set shiftwidth=4
 set autoindent
 set smartindent
 set cindent
+
+" Set php files type to html for correct indentation
+" autocmd filetype php :set ft=html
 
 " Show line numbers
 set nu
