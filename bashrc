@@ -113,6 +113,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+alias killProcess='ps -ax | grep $1'
+
 # Add git branch if its present to PS1
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -126,3 +128,6 @@ unset color_prompt force_color_prompt
 
 # Add laravel to path
 export PATH=/home/imad/.composer/vendor/bin:$PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
