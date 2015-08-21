@@ -15,7 +15,7 @@ endif
 " Color Schemes
 "===================
 syntax enable
-colorscheme PaperColor
+colorscheme beekai
 
 "===================
 " Plugins
@@ -28,7 +28,7 @@ filetype plugin indent on
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
-" CPP Syntax
+" YCM c++ Syntax
 let g:cpp_class_scope_highlight=1
 
 "===================
