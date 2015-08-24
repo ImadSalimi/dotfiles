@@ -15,34 +15,60 @@ endif
 " Color Schemes
 "===================
 syntax enable
-colorscheme beekai
+colorscheme birds-of-paradise
 
 "===================
 " Plugins
 "===================
-" Pathogen
+""" Pathogen
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-" Toggle NERDTree
+""" Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
-" YCM c++ Syntax
+""" YCM c++ Syntax
 let g:cpp_class_scope_highlight=1
+
+""" Neosnippet key-mappings
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+
+let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet/snippets'
 
 "===================
 " Visual settings
 "===================
-" Set indents to be of width 4
+" Set tabs and indents to be of width 4
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set noexpandtab
 
 " Better indentation
-set autoindent
 set smartindent
-set cindent
+set autoindent
+
+" Set indent for some specific filetypes
+au filetype python\|css\|jade\|sass set sw=2 ts=2 sts=2 et
 
 " Set php files type to html for correct indentation
 " autocmd filetype php :set ft=html
@@ -76,6 +102,5 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Toggle 'set list'
-set list
 map <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
