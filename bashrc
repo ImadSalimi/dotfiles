@@ -126,8 +126,9 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# Add laravel to path
-export PATH=/home/imad/.composer/vendor/bin:$PATH
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+alias make='make -f ~/Makefile'

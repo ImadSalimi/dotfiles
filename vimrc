@@ -15,7 +15,8 @@ endif
 " Color Schemes
 "===================
 syntax enable
-colorscheme birds-of-paradise
+set background=dark
+colorscheme PaperColor
 
 "===================
 " Plugins
@@ -30,6 +31,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 """ YCM c++ Syntax
 let g:cpp_class_scope_highlight=1
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 """ Neosnippet key-mappings
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
@@ -51,7 +53,6 @@ endif
 
 " Enable snipMate compatibility feature.
 let g:neosnippet#enable_snipmate_compatibility = 1
-
 let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet/snippets'
 
 "===================
