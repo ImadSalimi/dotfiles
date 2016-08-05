@@ -113,8 +113,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias killProcess='ps -ax | grep $1'
-
 # Add git branch if its present to PS1
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -131,4 +129,20 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-alias make='make -f ~/Makefile'
+### Add composer globals to path
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+# added by Anaconda2 2.5.0 installer
+export PATH="/home/imad/anaconda2/bin:$PATH"
+
+# Add Neo4j to path
+export PATH="/home/imad/Downloads/neo4j-community-2.3.2/bin:$PATH"
+
+# Add Go to path
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/Programming/go
+export PATH=$PATH:$GOPATH/bin
+
+# Execute local npm packages
+alias npm-exec='PATH=$(npm bin):$PATH'

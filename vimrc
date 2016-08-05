@@ -31,6 +31,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 """ YCM c++ Syntax
 let g:cpp_class_scope_highlight=1
+let g:cpp_experimental_template_highlight=1
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 """ Neosnippet key-mappings
