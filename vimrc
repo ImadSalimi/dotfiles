@@ -1,6 +1,8 @@
 "===================
 " General Settings
 "===================
+" Fix arrow keys writing "ABCD" in normal mode
+set nocompatible
 " Always show status line
 set laststatus=2
 " Enable 256-colors mode
@@ -15,7 +17,7 @@ endif
 " Color Schemes
 "===================
 syntax enable
-set background=dark
+set background=light
 colorscheme PaperColor
 
 "===================
@@ -28,11 +30,6 @@ filetype plugin indent on
 
 """ Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
-
-""" YCM c++ Syntax
-let g:cpp_class_scope_highlight=1
-let g:cpp_experimental_template_highlight=1
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 """ Neosnippet key-mappings
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
