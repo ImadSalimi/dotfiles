@@ -2,7 +2,9 @@
 " General Settings
 "===================
 " Fix arrow keys writing "ABCD" in normal mode
-set nocompatible
+" set nocompatible
+" Relative line numbers
+set relativenumber
 " Always show status line
 set laststatus=2
 " Enable 256-colors mode
