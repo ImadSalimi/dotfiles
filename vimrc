@@ -19,8 +19,8 @@ endif
 " Color Schemes
 "===================
 syntax enable
-set background=light
-colorscheme PaperColor
+set background=dark
+colorscheme solarized
 
 "===================
 " Plugins

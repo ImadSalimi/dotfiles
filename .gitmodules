@@ -22,3 +22,9 @@
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/vim-material-theme"]
+	path = vim/bundle/vim-material-theme
+	url = https://github.com/jdkanani/vim-material-theme
+[submodule "vim/bundle/neosnippet-snippets"]
+	path = vim/bundle/neosnippet-snippets
+	url = https://github.com/Shougo/neosnippet-snippets
