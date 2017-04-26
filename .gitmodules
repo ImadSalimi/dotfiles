@@ -28,3 +28,27 @@
 [submodule "vim/bundle/neosnippet-snippets"]
 	path = vim/bundle/neosnippet-snippets
 	url = https://github.com/Shougo/neosnippet-snippets
+[submodule "vim/bundle/vim-rhubarb"]
+	path = vim/bundle/vim-rhubarb
+	url = https://github.com/tpope/vim-rhubarb
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim/bundle/vim-ctrlspace"]
+	path = vim/bundle/vim-ctrlspace
+	url = https://github.com/vim-ctrlspace/vim-ctrlspace.git
+[submodule "vim/bundle/vim-tmux-navigator"]
+	path = vim/bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator
+[submodule "vim/bundle/yajs.vim"]
+	path = vim/bundle/yajs.vim
+	url = https://github.com/othree/yajs.vim
+[submodule "vim/bundle/vim-vue"]
+	path = vim/bundle/vim-vue
+	url = https://github.com/posva/vim-vue
+[submodule "vim/bundle/vim-vue-syntastic"]
+	path = vim/bundle/vim-vue-syntastic
+	url = https://github.com/sekel/vim-vue-syntastic
+[submodule "vim/bundle/syntastic-local-eslint.vim"]
+	path = vim/bundle/syntastic-local-eslint.vim
+	url = https://github.com/mtscout6/syntastic-local-eslint.vim

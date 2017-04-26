@@ -124,25 +124,20 @@ else
 fi
 unset color_prompt force_color_prompt
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 ### Add composer globals to path
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
-# added by Anaconda2 2.5.0 installer
-export PATH="/home/imad/anaconda2/bin:$PATH"
-
 # Add Neo4j to path
-export PATH="/home/imad/Downloads/neo4j-community-2.3.2/bin:$PATH"
+# export PATH="/home/imad/Downloads/neo4j-community-2.3.2/bin:$PATH"
 
 # Add Go to path
-export GOROOT=$HOME/go
-export PATH=$PATH:$GOROOT/bin
-export GOPATH=$HOME/Programming/go
-export PATH=$PATH:$GOPATH/bin
+# export GOROOT=$HOME/go
+# export PATH=$PATH:$GOROOT/bin
+# export GOPATH=$HOME/Programming/go
+# export PATH=$PATH:$GOPATH/bin
 
 # Execute local npm packages
 alias npm-exec='PATH=$(npm bin):$PATH'
+
+# added by Anaconda3 4.3.1 installer
+export PATH="/home/imad/anaconda3/bin:$PATH"

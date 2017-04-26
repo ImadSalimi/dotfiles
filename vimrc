@@ -1,8 +1,12 @@
+"the following simply creates an ambiguous mapping so vim fully
+"processes the escape sequence for terminal keys, see 'ttimeout' for a
+"rough explanation, this just forces it to work
+if &term[:4] == "xterm" || &term[:5] == 'screen' || &term[:3] == 'rxvt'
+  inoremap <silent> <C-[>OC <RIGHT>
+endif
 "===================
 " General Settings
 "===================
-" Fix arrow keys writing "ABCD" in normal mode
-" set nocompatible
 " Relative line numbers
 set relativenumber
 " Always show status line
@@ -12,14 +16,14 @@ set t_Co=256
 
 " Source .vimrc after saving it
 if has("autocmd")
-	autocmd bufwritepost .vimrc :source $MYVIMRC
+  autocmd bufwritepost .vimrc :source $MYVIMRC
 endif
 
 "===================
 " Color Schemes
 "===================
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 
 "===================
@@ -55,14 +59,31 @@ endif
 let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet/snippets'
 
+""" CtrlSpace
+set nocompatible
+set hidden
+
+""" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_vue_checkers = ['eslint']
+
 "===================
 " Visual settings
 "===================
 " Set tabs and indents to be of width 4
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
 
 " Better indentation
 set smartindent
@@ -105,3 +126,4 @@ map <C-l> <C-w>l
 " Toggle 'set list'
 map <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
+
