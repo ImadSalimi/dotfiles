@@ -132,9 +132,8 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Add Go to path
 # export GOROOT=$HOME/go
-# export PATH=$PATH:$GOROOT/bin
 # export GOPATH=$HOME/Programming/go
-# export PATH=$PATH:$GOPATH/bin
+# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Execute local npm packages
 alias npm-exec='PATH=$(npm bin):$PATH'

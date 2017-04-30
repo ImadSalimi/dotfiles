@@ -35,7 +35,7 @@ syntax on
 filetype plugin indent on
 
 """ Toggle NERDTree
-map <C-n> :NERDTreeToggle<CR>
+map <C-s> :NERDTreeToggle<CR>
 
 """ Neosnippet key-mappings
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
@@ -62,6 +62,7 @@ let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet/snippets'
 """ CtrlSpace
 set nocompatible
 set hidden
+set showtabline=0
 
 """ Syntastic
 set statusline+=%#warningmsg#
@@ -71,10 +72,13 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
 
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_vue_checkers = ['eslint']
+
+""" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 
 "===================
 " Visual settings
@@ -90,7 +94,7 @@ set smartindent
 set autoindent
 
 " Set indent for some specific filetypes
-au filetype python\|css\|jade\|sass set sw=2 ts=2 sts=2 et
+au filetype python\|css\|jade\|sass set sw=2 ts=2 sts=2 noet
 
 " Set php files type to html for correct indentation
 " autocmd filetype php :set ft=html
