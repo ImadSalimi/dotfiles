@@ -64,10 +64,13 @@ set nocompatible
 set hidden
 set showtabline=0
 
+""" Powerline
+set rtp+=$HOME/anaconda3/lib/python3.6/site-packages/powerline/bindings/vim
+
 """ Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -94,7 +97,7 @@ set smartindent
 set autoindent
 
 " Set indent for some specific filetypes
-au filetype python\|css\|jade\|sass set sw=2 ts=2 sts=2 noet
+au filetype python\|css\|jade\|sass set sw=2 ts=2 sts=2 et
 
 " Set php files type to html for correct indentation
 " autocmd filetype php :set ft=html
@@ -131,3 +134,8 @@ map <C-l> <C-w>l
 map <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
+" Tab movement
+nnoremap tj :tabnext<CR>
+nnoremap tk :tabprev<CR>
+nnoremap th :tabfirst<CR>
+nnoremap tl :tablast<CR>
