@@ -83,6 +83,9 @@ let g:syntastic_vue_checkers = ['eslint']
 """ YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 
+""" Undotree
+nnoremap <F5> :UndotreeToggle<CR>
+
 "===================
 " Visual settings
 "===================
@@ -131,6 +134,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Toggle 'set list'
+set list
 map <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
