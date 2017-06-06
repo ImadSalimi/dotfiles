@@ -23,7 +23,7 @@ endif
 " Color Schemes
 "===================
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 "===================
@@ -65,7 +65,7 @@ set hidden
 set showtabline=0
 
 """ Powerline
-set rtp+=$HOME/anaconda3/lib/python3.6/site-packages/powerline/bindings/vim
+" set rtp+=$HOME/anaconda3/lib/python3.6/site-packages/powerline/bindings/vim
 
 """ Syntastic
 " set statusline+=%#warningmsg#
